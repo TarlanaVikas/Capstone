@@ -18,7 +18,7 @@ Instead of always performing vector search, the system evaluates the user's ques
 - Retry generation when quality gates fail
 - Record evaluation and observability information for each run
 - Apply security controls against prompt injection and sensitive information leakage
-- Support human approval before web search when required
+- Support human approval before web search when required.
 
 The project includes a **FastAPI backend**, **Next.js frontend**, **LangGraph agent workflow**, vector-based retrieval, LLM-based grading, security controls, evaluation tracking, observability, and Docker deployment.
 
