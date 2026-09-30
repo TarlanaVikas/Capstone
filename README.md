@@ -874,15 +874,6 @@ These are intentionally treated as future production-hardening improvements rath
 | Automated tests | ✅ 33 passed |
 
 
-
-# License
-
-This project is intended as a portfolio and learning project.
-
-# Author
-
-**Mohamed Shaad**
-
 Machine Learning Engineer | Generative AI | Agentic AI | LLM Systems
 
 ```text
