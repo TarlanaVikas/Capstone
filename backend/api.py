@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import io
 import uuid
+import logging
 
 import json
 import zipfile
@@ -801,11 +802,17 @@ async def upload_documents(
             await uploaded_file.close()
 
         if not uploaded:
-            return {
-                "message": "No files were uploaded.",
-                "uploaded": [],
-                "rejected": rejected,
-            }
+            rejection_details = "; ".join(
+                f"{item['file_name'] or 'File'}: {item['reason']}"
+                for item in rejected
+            )
+            raise HTTPException(
+                status_code=400,
+                detail=(
+                    "No valid files were uploaded."
+                    + (f" {rejection_details}" if rejection_details else "")
+                ),
+            )
 
         build_vectorstore(
             [
@@ -830,7 +837,11 @@ async def upload_documents(
             "documents": list_documents(),
         }
 
+    except HTTPException:
+        raise
+
     except Exception as exc:
+        logging.exception("Document upload failed during ingestion.")
         raise HTTPException(
             status_code=500,
             detail="Upload failed while processing the documents.",
