@@ -1,5 +1,4 @@
-##A Training-Free Framework for Reliable Retrieval- Augmented Generation: Evidence-Aware Routing, Relevance Grading, and Bounded Answer
-Verification
+## Adaptive Unified Retrieval & Reasoning for RAG
 
 > A production-oriented Agentic RAG system built with LangGraph that dynamically routes queries between local knowledge retrieval and web search, validates retrieval and generated answers, detects hallucinations, applies security controls, and provides evaluation and observability.
 
