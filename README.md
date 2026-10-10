@@ -1479,12 +1479,3 @@ These are intentionally treated as future production-hardening improvements rath
 | Docker frontend | ✅ |
 | Automated tests | ✅ 33 passed |
 
----
-
-
-**Machine Learning Engineer | Generative AI | Agentic AI | LLM Systems**
-
-```text
-Python • LangGraph • LangChain • RAG • LLMs
-FastAPI • Docker • Vector Search • Generative AI
-```
